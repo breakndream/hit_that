@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <iframe src="https://giphy.com/embed/5fBH6zrcIiOs65zXCtG" width="105"height="80"frameBorder="0"> </iframe>
+    <title>
+      Hit this xylophone </title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <h1>Hit this Xylophone Challenge</h1>
+    <p>Welcome! Repeat the pattern and be the winner of this Xylophone Contest!</p>
+    <audio src="Assets/myAudio.mp3" id="myAudio"></audio>
+    
+    <button id="startBtn" onclick="playMyAudio();startGame()">Start</button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
+    <p id="life3" class="life">Life: 3</p>
+    <p id="life2" class="life hidden">Life: 2</p>
+    <p id="life1" class="life hidden">Life: 1</p>
+    <p id="life0" class="life hidden">Life: 0</p>
+    <div id="gameButtonArea">
+      <button
+        id="button1"
+        onclick="guess(1)"
+        onmousedown="startTone(1)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button2"
+        onclick="guess(2)"
+        onmousedown="startTone(2)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button3"
+        onclick="guess(3)"
+        onmousedown="startTone(3)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button4"
+        onclick="guess(4)"
+        onmousedown="startTone(4)"
+        onmouseup="stopTone()"
+      ></button>
+      <button
+        id="button5"
+        onclick="guess(5)"
+        onmousedown="startTone(5)"
+        onmouseup="stopTone()"
+      ></button>
+    </div>
+  </body>
+</html>
