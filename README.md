@@ -88,7 +88,7 @@ pattern = [];
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://youtu.be/oRBJXsIsaB0)
 
 
 ## License
