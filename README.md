@@ -53,7 +53,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 **1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here.**   
 Generating Random Numbers: https://www.w3schools.com/js/js_random.asp  
 Source for a Gif embedded at the top of page: https://giphy.com/stickers/5fBH6zrcIiOs65zXCtG     
-Source to make backshadows for h1: https://welearncode.com/rainbow-text/
+Source to make backshadows for h1: https://welearncode.com/rainbow-text/   
 Source for adding a sound effect:  
 https://soundeffect-lab.info/sound/anime/  
 https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event  
