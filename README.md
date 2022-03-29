@@ -35,9 +35,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented :  
 
 List anything else that you can get done to improve the app!
-- Prevent users starting guesses before computer ends its pattern
-- Add sound when users push a start button
-
+* [X] Sound Effect being played when users push the start button
 
 ## Video Walkthrough (GIF)
 
@@ -56,8 +54,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 Generating Random Numbers: https://www.w3schools.com/js/js_random.asp  
 Source for a Gif embedded at the top of page: https://giphy.com/stickers/5fBH6zrcIiOs65zXCtG     
 Source to make backshadows for h1: https://welearncode.com/rainbow-text/
-
-- I tried to end a sound effect when I clicked a start button, but eventually, I could do it. But here are the sources that I referenced  
+Source for adding a sound effect:  
 https://soundeffect-lab.info/sound/anime/  
 https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event  
 https://programminghead.com/how-to-play-audio-in-html-using-javascript/  
@@ -76,6 +73,7 @@ pattern = [];
     pattern.push(number)
   }
 - Finally, I tried to implement adding a sound effect when users push a start button. I wrote following codes in HTML while referencing the link that codepath gave us <audio src="Assets/myAudio.mp3" id="myAudio"></audio> <button id="startBtn" onclick="playMyAudio();startGame()">Start</button>  and this function (function playMyAudio(){ document.getElementById("myAudio").play();}) in Javascript. But eventually I wasn’t able to implement it so I wonder what the problem is.
+- => After writing this, I gave myself one more day to implement this feature, and FINALLY I could do it. For <audio src=> I used url of the audio file instead of "Assets/myAudio.mp3", and it worked.
 
 
 **3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words)**   
@@ -83,7 +81,7 @@ pattern = [];
 - Before this project, I already had some experience in CSS and HTML but it was the first time for me to use Javascript. Javascript was like HTML or CSS but it was also like Java (typecasting) so I am curious how Javascript works specifically (its syntax, efficient procedural coding style).  Also, I couldn’t update values for Life in HTML so I am curious if there’s another way to update Life. (I’ve heard that React is dynamic so I want to know how dynamical frontend software would work to implement features) Since we got codes from the codepath during this project, all the codes were efficient and concise. But when I did my personal project, I overused paddings and margins in CSS to visualize design. I thought that was inefficient so I wonder how real-world software engineers work to manage their codes efficiently.      
   
 **4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words)**  
-- First, I would definitely implement a feature that prevents users starting guesses before the computer ends its pattern and debug what caused an error for adding a sound effect. 
+- First, I would definitely implement a feature that prevents users starting guesses before the computer ends its pattern and debug what caused an error for adding a sound effect(the latter part, I could do it after debugging). 
 - Second, I would work on the last optional feature, adding a ticking clock. 
 - Third, I would like to generate a few arrays that would make a simple song (like twinkle little star), make a few options and let users choose which music they want to play. 
 - Finally, I am not sure if I can do this, but it would be nice to change the design of the cursor to a xylophone mallet because that would be fun.
