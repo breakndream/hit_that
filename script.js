@@ -14,18 +14,20 @@ var tonePlaying = false;
 var volume = 0.5; //must be between 0.0 and 1.0
 var guessCounter = 0;
 
-function playMyAudio(){
-  document.getElementById("myAudio").play();
+function playMyAudio() {
+  const audio = document.getElementById("myAudio");
+  audio.play();
 }
 
 function startGame() {
-  
+  playMyAudio();
+
   pattern = [];
-  for (let j = 0 ; j < 9; j ++ ){
-    var number = Math.floor(Math.random() * 5) + 1
-    pattern.push(number)
+  for (let j = 0; j < 9; j++) {
+    var number = Math.floor(Math.random() * 5) + 1;
+    pattern.push(number);
   }
-  
+
   clueHoldTime = 1000;
   //initialize game variables
   life = 3;
@@ -41,21 +43,18 @@ function startGame() {
 
 function stopGame() {
   gamePlaying = false;
-  
+
   // Updata life to 3 & show Life:3
   life = 3;
   document.getElementById("life0").classList.add("hidden");
   document.getElementById("life1").classList.add("hidden");
   document.getElementById("life2").classList.add("hidden");
   document.getElementById("life3").classList.remove("hidden");
-  
+
   // swap the Start and Stop buttons
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
-  
-                                                   
 }
-
 
 // Sound Synthesis Functions
 const freqMap = {
@@ -91,8 +90,6 @@ function stopTone() {
   tonePlaying = false;
 }
 
-
-
 // Page Initialization
 // Init Sound Synthesizer
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -127,9 +124,9 @@ function playClueSequence() {
     //for each clue that is revealed so far
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]); // set a timeout to play that clue
-    
-    clueHoldTime *= 0.92
-    
+
+    clueHoldTime *= 0.92;
+
     delay += clueHoldTime; // why isn't there a semicolon after this?
     delay += cluePauseTime;
   }
@@ -151,7 +148,7 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-  
+
   if (btn == pattern[guessCounter]) {
     // Is guess correct?
     if (progress == guessCounter) {
@@ -168,25 +165,25 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
-      if (life === 3){
-        life -= 1;
-        document.getElementById("life3").classList.add("hidden");
-        document.getElementById("life2").classList.remove("hidden");
-        alert("lost 1 life! 😈");
-        progress++;
-        playClueSequence();
-      } else if (life === 2){
-        life -= 1;
-        document.getElementById("life2").classList.add("hidden");
-        document.getElementById("life1").classList.remove("hidden");
-        alert("ONLY ONE MORE LIFE 😈 😈 😈");
-        progress++;
-        playClueSequence();
-      } else if (life === 1) {
-        life -= 1;
-        document.getElementById("life1").classList.add("hidden");
-        document.getElementById("life0").classList.remove("hidden");
-        loseGame();
-      }
+    if (life === 3) {
+      life -= 1;
+      document.getElementById("life3").classList.add("hidden");
+      document.getElementById("life2").classList.remove("hidden");
+      alert("lost 1 life! 😈");
+      progress++;
+      playClueSequence();
+    } else if (life === 2) {
+      life -= 1;
+      document.getElementById("life2").classList.add("hidden");
+      document.getElementById("life1").classList.remove("hidden");
+      alert("ONLY ONE MORE LIFE 😈 😈 😈");
+      progress++;
+      playClueSequence();
+    } else if (life === 1) {
+      life -= 1;
+      document.getElementById("life1").classList.add("hidden");
+      document.getElementById("life0").classList.remove("hidden");
+      loseGame();
+    }
   }
 }
