@@ -4,7 +4,7 @@
 
 Submitted by: **Sharon Kang**
 
-Time spent: **5** hours spent in total
+Time spent: **10** hours spent in total
 
 Link to project: https://glitch.com/edit/#!/sordid-darkened-twilight
 
@@ -47,7 +47,8 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 **Fail**  
 <img src='http://g.recordit.co/Zn1SHPSWLd.gif' title='Video Walkthrough' width='600'/>
 
-![](gif4-link-here)
+[Demo Video for the Game](https://www.youtube.com/watch?v=k-XlyNn2P3Q&feature=youtu.be)
+
 
 ## Reflection Questions
 **1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here.**   
